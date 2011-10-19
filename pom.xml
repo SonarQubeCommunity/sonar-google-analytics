@@ -11,7 +11,7 @@
 
   <artifactId>sonar-googleanalytics-plugin</artifactId>
   <packaging>sonar-plugin</packaging>
-  <version>2.12-SNAPSHOT</version>
+  <version>1.0-SNAPSHOT</version>
 
   <name>Sonar Google Analytics Plugin</name>
   <description><![CDATA[Add the <a href="http://www.google.com/analytics/">Google Analytics</a> tracking script to the Sonar web application.]]></description>
