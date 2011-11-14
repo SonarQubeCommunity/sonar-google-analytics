@@ -20,6 +20,7 @@
 package org.sonar.plugins.googleanalytics;
 
 import org.apache.commons.configuration.Configuration;
+import org.apache.commons.lang.StringUtils;
 import org.sonar.api.CoreProperties;
 import org.sonar.api.web.Footer;
 
@@ -41,7 +42,7 @@ public class GoogleAnalyticsWebFooter implements Footer {
 
   public String getHtml() {
     String id = getIdAccount();
-    if (id != null && !"".equals(id)) {
+    if (StringUtils.isNotBlank(id)) {
       return "<script type=\"text/javascript\">\n" +
           "var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n" +
           "document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n" +

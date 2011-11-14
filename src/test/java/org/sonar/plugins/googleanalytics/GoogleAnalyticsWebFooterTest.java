@@ -20,6 +20,8 @@
 package org.sonar.plugins.googleanalytics;
 
 import static org.hamcrest.Matchers.containsString;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
@@ -38,6 +40,12 @@ public class GoogleAnalyticsWebFooterTest {
   public void setUp() {
     conf = new BaseConfiguration();
     footer = new GoogleAnalyticsWebFooter(conf);
+  }
+
+  @Test
+  public void test() {
+    assertThat(footer.getKey(), notNullValue());
+    assertThat(footer.toString(), is(footer.getKey()));
   }
 
   @Test
