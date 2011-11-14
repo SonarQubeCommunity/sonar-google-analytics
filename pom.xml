@@ -11,7 +11,7 @@
 
   <artifactId>sonar-googleanalytics-plugin</artifactId>
   <packaging>sonar-plugin</packaging>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
 
   <name>Sonar Google Analytics Plugin</name>
   <description><![CDATA[Add the <a href="http://www.google.com/analytics/">Google Analytics</a> tracking script to the Sonar web application.]]></description>
@@ -30,9 +30,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:svn:https://svn.codehaus.org/sonar-plugins/tags/sonar-googleanalytics-plugin-1.0</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/sonar-plugins/tags/sonar-googleanalytics-plugin-1.0</developerConnection>
-    <url>scm:svn:https://svn.codehaus.org/sonar-plugins/tags/sonar-googleanalytics-plugin-1.0</url>
+    <connection>scm:svn:http://svn.codehaus.org/sonar-plugins/trunk/google-analytics</connection>
+    <developerConnection>scm:svn:https://svn.codehaus.org/sonar-plugins/trunk/google-analytics</developerConnection>
+    <url>http://svn.sonar-plugins.codehaus.org</url>
   </scm>
   <issueManagement>
     <system>JIRA</system>
