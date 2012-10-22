@@ -19,27 +19,27 @@
  */
 package org.sonar.plugins.googleanalytics;
 
+import org.junit.Before;
+import org.junit.Test;
+import org.sonar.api.CoreProperties;
+import org.sonar.api.config.PropertyDefinitions;
+import org.sonar.api.config.Settings;
+
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.nullValue;
 import static org.junit.Assert.assertThat;
 
-import org.apache.commons.configuration.BaseConfiguration;
-import org.apache.commons.configuration.Configuration;
-import org.junit.Before;
-import org.junit.Test;
-import org.sonar.api.CoreProperties;
-
 public class GoogleAnalyticsWebFooterTest {
 
-  private Configuration conf;
+  private Settings settings;
   private GoogleAnalyticsWebFooter footer;
 
   @Before
   public void setUp() {
-    conf = new BaseConfiguration();
-    footer = new GoogleAnalyticsWebFooter(conf);
+    settings = new Settings(new PropertyDefinitions(GoogleAnalyticsPlugin.class));
+    footer = new GoogleAnalyticsWebFooter(settings);
   }
 
   @Test
@@ -55,7 +55,7 @@ public class GoogleAnalyticsWebFooterTest {
 
   @Test
   public void shouldReturnHtml() {
-    conf.setProperty(CoreProperties.GOOGLE_ANALYTICS_ACCOUNT_PROPERTY, "UA-1234567-8");
+    settings.setProperty(CoreProperties.GOOGLE_ANALYTICS_ACCOUNT_PROPERTY, "UA-1234567-8");
     String html = footer.getHtml();
     assertThat(html, containsString("google-analytics.com"));
     assertThat(html, containsString("UA-1234567-8"));

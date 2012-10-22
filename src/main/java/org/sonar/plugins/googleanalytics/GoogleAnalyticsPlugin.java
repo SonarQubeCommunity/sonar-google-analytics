@@ -19,16 +19,21 @@
  */
 package org.sonar.plugins.googleanalytics;
 
-import org.sonar.api.*;
+import org.sonar.api.CoreProperties;
+import org.sonar.api.Extension;
+import org.sonar.api.Properties;
+import org.sonar.api.Property;
+import org.sonar.api.SonarPlugin;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Properties({
-    @Property(
-        key = CoreProperties.GOOGLE_ANALYTICS_ACCOUNT_PROPERTY,
-        name = "Account key",
-        description = "Example : UA-1234567-8")
+  @Property(
+    key = CoreProperties.GOOGLE_ANALYTICS_ACCOUNT_PROPERTY,
+    name = "Account key",
+    description = "Example : UA-1234567-8",
+    defaultValue = "")
 })
 public class GoogleAnalyticsPlugin extends SonarPlugin {
 

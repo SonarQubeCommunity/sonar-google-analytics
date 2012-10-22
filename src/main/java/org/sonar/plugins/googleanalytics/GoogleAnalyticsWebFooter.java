@@ -19,21 +19,21 @@
  */
 package org.sonar.plugins.googleanalytics;
 
-import org.apache.commons.configuration.Configuration;
 import org.apache.commons.lang.StringUtils;
 import org.sonar.api.CoreProperties;
+import org.sonar.api.config.Settings;
 import org.sonar.api.web.Footer;
 
 public class GoogleAnalyticsWebFooter implements Footer {
 
-  private Configuration configuration;
+  private Settings settings;
 
-  public GoogleAnalyticsWebFooter(Configuration configuration) {
-    this.configuration = configuration;
+  public GoogleAnalyticsWebFooter(Settings settings) {
+    this.settings = settings;
   }
 
   protected String getIdAccount() {
-    return configuration.getString(CoreProperties.GOOGLE_ANALYTICS_ACCOUNT_PROPERTY, "");
+    return settings.getString(CoreProperties.GOOGLE_ANALYTICS_ACCOUNT_PROPERTY);
   }
 
   public String getKey() {
@@ -44,14 +44,14 @@ public class GoogleAnalyticsWebFooter implements Footer {
     String id = getIdAccount();
     if (StringUtils.isNotBlank(id)) {
       return "<script type=\"text/javascript\">\n" +
-          "var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n" +
-          "document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n" +
-          "</script>\n" +
-          "<script type=\"text/javascript\">\n" +
-          "var pageTracker = _gat._getTracker(\"" + id + "\");\n" +
-          "pageTracker._initData();\n" +
-          "pageTracker._trackPageview();\n" +
-          "</script>";
+        "var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n" +
+        "document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n" +
+        "</script>\n" +
+        "<script type=\"text/javascript\">\n" +
+        "var pageTracker = _gat._getTracker(\"" + id + "\");\n" +
+        "pageTracker._initData();\n" +
+        "pageTracker._trackPageview();\n" +
+        "</script>";
     }
     return null;
   }

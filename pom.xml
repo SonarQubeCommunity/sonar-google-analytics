@@ -5,7 +5,7 @@
   <parent>
     <groupId>org.codehaus.sonar-plugins</groupId>
     <artifactId>parent</artifactId>
-    <version>13</version>
+    <version>14</version>
     <relativePath>../parent</relativePath>
   </parent>
 
@@ -46,7 +46,7 @@
   -->
 
   <properties>
-    <sonar.version>2.11</sonar.version>
+    <sonar.version>3.0</sonar.version>
     <sonar.pluginName>Google Analytics</sonar.pluginName>
     <sonar.pluginClass>org.sonar.plugins.googleanalytics.GoogleAnalyticsPlugin</sonar.pluginClass>
   </properties>
