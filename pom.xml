@@ -30,20 +30,14 @@
   </licenses>
 
   <scm>
-    <connection>scm:svn:http://svn.codehaus.org/sonar-plugins/trunk/google-analytics</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/sonar-plugins/trunk/google-analytics</developerConnection>
-    <url>http://svn.sonar-plugins.codehaus.org</url>
+    <connection>scm:git:git@github.com:SonarCommunity/sonar-google-analytics.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-google-analytics.git</developerConnection>
+    <url>https://github.com/SonarCommunity/sonar-google-analytics</url>
   </scm>
   <issueManagement>
     <system>JIRA</system>
     <url>http://jira.codehaus.org/browse/SONARPLUGINS/component/15151</url>
   </issueManagement>
-  <!-- TODO
-  <ciManagement>
-    <system>Bamboo</system>
-    <url></url>
-  </ciManagement>
-  -->
 
   <properties>
     <sonar.version>3.0</sonar.version>
