@@ -44,13 +44,14 @@ public class GoogleAnalyticsWebFooter implements Footer {
     String id = getIdAccount();
     if (StringUtils.isNotBlank(id)) {
       return "<script type=\"text/javascript\">\n" +
-        "var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\");\n" +
-        "document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\"));\n" +
-        "</script>\n" +
-        "<script type=\"text/javascript\">\n" +
-        "var pageTracker = _gat._getTracker(\"" + id + "\");\n" +
-        "pageTracker._initData();\n" +
-        "pageTracker._trackPageview();\n" +
+        "  var _gaq = _gaq || [];\n" +
+        "  _gaq.push(['_setAccount', '" + id + "']);\n" +
+        "  _gaq.push(['_trackPageview']);\n" +
+        "  (function() {\n" +
+        "    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;\n" +
+        "    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';\n" +
+        "    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);\n" +
+        "  })();\n" +
         "</script>";
     }
     return null;

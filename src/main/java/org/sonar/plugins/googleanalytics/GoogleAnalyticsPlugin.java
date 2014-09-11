@@ -20,12 +20,11 @@
 package org.sonar.plugins.googleanalytics;
 
 import org.sonar.api.CoreProperties;
-import org.sonar.api.Extension;
 import org.sonar.api.Properties;
 import org.sonar.api.Property;
 import org.sonar.api.SonarPlugin;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Properties({
@@ -37,10 +36,9 @@ import java.util.List;
 })
 public class GoogleAnalyticsPlugin extends SonarPlugin {
 
-  public List<Class<? extends Extension>> getExtensions() {
-    List<Class<? extends Extension>> list = new ArrayList<Class<? extends Extension>>();
-    list.add(GoogleAnalyticsWebFooter.class);
-    return list;
+  public List getExtensions() {
+    return Arrays.asList(
+      GoogleAnalyticsWebFooter.class);
   }
 
 }
