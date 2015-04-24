@@ -15,7 +15,7 @@
 
   <name>Sonar Google Analytics Plugin</name>
   <description><![CDATA[Add the <a href="http://www.google.com/analytics/">Google Analytics</a> tracking script to the SonarQube web application.]]></description>
-  <url>http://docs.codehaus.org/display/SONAR/Google+Analytics+Plugin</url>
+  <url>http://redirect.sonarsource.com/plugins/googleanalytics.html</url>
   <inceptionYear>2009</inceptionYear>
   <organization>
     <name>SonarSource</name>
