@@ -30,9 +30,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:SonarCommunity/sonar-google-analytics.git</connection>
-    <developerConnection>scm:git:git@github.com:SonarCommunity/sonar-google-analytics.git</developerConnection>
-    <url>https://github.com/SonarCommunity/sonar-google-analytics</url>
+    <connection>scm:git:git@github.com:SonarSource/sonar-google-analytics.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarSource/sonar-google-analytics.git</developerConnection>
+    <url>https://github.com/SonarSource/sonar-google-analytics</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
