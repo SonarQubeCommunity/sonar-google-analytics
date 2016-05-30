@@ -30,14 +30,14 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git@github.com:SonarSource/sonar-google-analytics.git</connection>
-    <developerConnection>scm:git:git@github.com:SonarSource/sonar-google-analytics.git</developerConnection>
-    <url>https://github.com/SonarSource/sonar-google-analytics</url>
+    <connection>scm:git:git@github.com:SonarQubeCommunity/sonar-google-analytics.git</connection>
+    <developerConnection>scm:git:git@github.com:SonarQubeCommunity/sonar-google-analytics.git</developerConnection>
+    <url>https://github.com/SonarQubeCommunity/sonar-google-analytics</url>
     <tag>HEAD</tag>
   </scm>
   <issueManagement>
-    <system>JIRA</system>
-    <url>http://jira.codehaus.org/browse/SONARPLUGINS/component/15151</url>
+    <system>GitHub Issues</system>
+    <url>https://github.com/SonarQubeCommunity/sonar-google-analytics/issues</url>
   </issueManagement>
 
   <properties>
